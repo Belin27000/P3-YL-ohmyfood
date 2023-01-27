@@ -13,10 +13,13 @@ header {
     & .btn__retourHome {
         /*width: 100%;*/
         /*justify-self: start;*/
-        padding-left: 2rem;
+        width: 100%;
+        position: absolute;
+
 
         & i {
             font-size: 20px;
+            padding-left: 2rem;
         }
     }
 
