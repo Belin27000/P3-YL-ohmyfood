@@ -1,0 +1,35 @@
+//Grid template setting
+@mixin grid-template-set($section) {
+    @if ($section=="explore") {
+        $section: $grid-columns-explore;
+    }
+
+    @if ($section=="presentation") {
+        $section: $grid-columns-presentation;
+    }
+
+    @else if ($section=="choice") {
+        $section: $grid-columns-choice;
+    }
+
+    @else if ($section=="restaurants") {
+        $section: $grid-columns-Restaurants;
+    }
+
+    @else if ($section=="footer") {
+        $section: $grid-columns-footer;
+    }
+
+    grid-template-columns: repeat($section, 1fr);
+}
+
+//Grid position setting
+@mixin grid-pos-set ($row-start, $row-end, $col-start, $col-end) {
+    grid-row: $row-start unquote("/") $row-end;
+    grid-column: $col-start unquote("/") $col-end;
+}
+
+//Hover choice__list
+@mixin choice__list-hover ($color-primary) {
+    background-color: lighten($color-primary, 32%);
+}

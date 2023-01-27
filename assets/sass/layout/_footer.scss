@@ -1,0 +1,28 @@
+footer {
+    background-color: $gris-sombre;
+
+    color: $txt-fond-sombre;
+
+
+    & h2 {
+        padding: 1em;
+    }
+
+    ul {
+        padding-bottom: 2em;
+
+        li {
+            padding: .2em 0 .2em 1rem;
+
+
+            & a {
+                color: $txt-fond-sombre;
+
+                & i {
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+
+}

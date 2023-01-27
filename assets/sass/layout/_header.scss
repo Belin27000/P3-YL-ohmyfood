@@ -1,0 +1,23 @@
+header {
+
+    @extend %grid-center;
+    padding: 1em 0 1em 0;
+    width: 100%;
+
+
+    & h1 {
+        font-family: 'Shrikhand', cursive;
+
+    }
+
+    & .btn__retourHome {
+        width: 100%;
+        justify-self: start;
+
+        & i {
+            font-size: 20px;
+        }
+    }
+
+
+}
