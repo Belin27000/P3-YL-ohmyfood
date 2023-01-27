@@ -1,15 +1,19 @@
 .btn__like {
+    padding-left: 2em;
+    /*display: flex;*/
+
     & .heart-away {
         display: block;
+        position: absolute;
         transform: scale(1);
         transition: all 0.5s;
     }
 
     & .heart-hover {
-        display: block;
+        /*display: block;*/
         transform: scale(0);
         transition: all 0.5s;
-        position: absolute;
+        /*position: absolute;*/
         top: 0;
 
         //Coloris

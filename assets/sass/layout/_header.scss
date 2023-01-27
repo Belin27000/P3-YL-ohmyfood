@@ -11,11 +11,15 @@ header {
     }
 
     & .btn__retourHome {
+        /*width: 100%;*/
+        /*justify-self: start;*/
         width: 100%;
-        justify-self: start;
+        position: absolute;
+
 
         & i {
             font-size: 20px;
+            padding-left: 2rem;
         }
     }
 

@@ -1,7 +1,8 @@
 .btn {
     color: white;
     align-self: center;
-    /*@extend %grid-center;*/
+    width: 40%;
+    @extend %grid-center;
 
     &--gradient {
         background: linear-gradient(350deg, rgba(147, 86, 220, 1) 9%, rgba(255, 121, 218, 1) 70%);
@@ -14,7 +15,7 @@
         border-radius: 25px;
         border: none;
         padding: 1rem;
-        margin-bottom: 2rem;
+        /*margin-bottom: 2rem;*/
     }
 
 }

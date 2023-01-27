@@ -45,21 +45,22 @@ br {
   margin-bottom: 10px;
 }
 
-main .menu__pic, main .restaurants, main .presentation, main .explore, header {
+body main .menu__pic, body main .restaurants, body main .presentation, body main .explore, header, .btn {
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
-main .menu__detail ul li, main .choice ul li {
+/*box shadow des */
+body main .menu__detail ul li, body main .restaurants a, body main .choice ul li {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  border-radius: 1.5em;
 }
 
 .btn {
   color: white;
   align-self: center;
-  /*@extend %grid-center;*/
+  width: 40%;
 }
 .btn--gradient {
   background: linear-gradient(350deg, rgb(147, 86, 220) 9%, rgb(255, 121, 218) 70%);
@@ -70,19 +71,24 @@ main .menu__detail ul li, main .choice ul li {
   border-radius: 25px;
   border: none;
   padding: 1rem;
-  margin-bottom: 2rem;
+  /*margin-bottom: 2rem;*/
 }
 
+.btn__like {
+  padding-left: 2em;
+  /*display: flex;*/
+}
 .btn__like .heart-away {
   display: block;
+  position: absolute;
   transform: scale(1);
   transition: all 0.5s;
 }
 .btn__like .heart-hover {
-  display: block;
+  /*display: block;*/
   transform: scale(0);
   transition: all 0.5s;
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   background-color: black;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
@@ -109,44 +115,50 @@ header h1 {
   font-family: "Shrikhand", cursive;
 }
 header .btn__retourHome {
+  /*width: 100%;*/
+  /*justify-self: start;*/
   width: 100%;
-  justify-self: start;
+  position: absolute;
 }
 header .btn__retourHome i {
   font-size: 20px;
+  padding-left: 2rem;
 }
 
 /*Début du code de la page d'acceuil*/
-main {
+body {
+  /*Postionnement du header des pages menu*/
+}
+body main {
   /*Fin du code de la page d'acceuil*/
   /*Début du code des menu*/
 }
-main .explore {
+body main .explore {
   padding: 1em;
   background: #eaeaea;
 }
-main .explore i {
+body main .explore i {
   padding: 0 0.5em 0 0;
 }
-main .presentation {
+body main .presentation {
   justify-items: center;
   padding: 2em 0 3em;
   background: #f7f7f7;
   text-align: center;
 }
-main .presentation h2 {
-  padding: 0 5em;
+body main .presentation h2 {
+  padding: 0;
 }
-main .presentation p {
+body main .presentation p {
   padding: 1em 5em 2em;
 }
-main .choice {
+body main .choice {
   padding: 3em 1em;
 }
-main .choice h2 {
+body main .choice h2 {
   justify-self: start;
 }
-main .choice ul {
+body main .choice ul {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2em;
@@ -154,22 +166,22 @@ main .choice ul {
   justify-self: normal;
   counter-reset: section;
 }
-main .choice ul li {
+body main .choice ul li {
   font-size: 1em;
   padding: 1.5em;
   background-color: #f7f7f7;
 }
 @media screen and (min-width: 768px) {
-  main .choice ul {
+  body main .choice ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1024px) {
-  main .choice ul {
+  body main .choice ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-main .choice li::before {
+body main .choice li::before {
   counter-increment: section;
   content: counter(section);
   position: relative;
@@ -179,29 +191,29 @@ main .choice li::before {
   background-color: #9356DC;
   color: #ffffff;
 }
-main .choice li:hover {
+body main .choice li:hover {
   background-color: #f2eafb;
 }
-main .choice li:hover i {
+body main .choice li:hover i {
   color: #9356DC;
 }
-main .choice p {
+body main .choice p {
   display: inline-block;
   position: relative;
   left: -0.7em;
 }
-main .choice i {
+body main .choice i {
   padding: 0 1em 0 0;
 }
-main .restaurants {
+body main .restaurants {
   grid-template-columns: repeat(1, 1fr);
   padding: 3em 1em;
   background: #f7f7f7;
 }
-main .restaurants h2 {
+body main .restaurants h2 {
   justify-self: start;
 }
-main .restaurants ul {
+body main .restaurants ul {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2em;
@@ -209,28 +221,26 @@ main .restaurants ul {
   margin: 1em 0;
 }
 @media screen and (min-width: 768px) {
-  main .restaurants ul {
+  body main .restaurants ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1024px) {
-  main .restaurants ul {
+  body main .restaurants ul {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-main .restaurants ul li {
+body main .restaurants ul li {
   display: inline-block;
   width: 100%;
 }
-main .restaurants a {
+body main .restaurants a {
   display: block;
   position: relative;
   padding: 0 0 0.7rem 0;
   color: #000000;
-  border-radius: 1.5em;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
-main .restaurants a .sticker {
+body main .restaurants a .sticker {
   position: absolute;
   right: 1em;
   top: 1em;
@@ -239,98 +249,110 @@ main .restaurants a .sticker {
   background: #99e2d0;
   border-radius: 0.2em;
 }
-main .restaurants a img {
+body main .restaurants a img {
   padding: 0 0 0.5rem 0;
   width: 100%;
   height: 12.5em;
   object-fit: cover;
   border-radius: 1.5em 1.5em 0 0;
 }
-main .restaurants a h3,
-main .restaurants a p {
+body main .restaurants a h3,
+body main .restaurants a p {
   padding: 0 1rem 0.5rem;
 }
-main .restaurants a .btn__like {
+body main .restaurants a .btn__like {
   position: absolute;
   bottom: 2.5rem;
   right: 1.5rem;
   font-size: 1.5em;
   cursor: pointer;
 }
-main .menu {
-  background-color: #f7f7f7;
+body main .menu {
+  /*background-color: $gris-clair;*/
 }
-main .menu * {
+body main .menu * {
   font-weight: 400;
 }
-main .menu__pic {
+body main .menu__pic {
   grid-template-columns: repeat(1, 1fr);
   /*position: relative;*/
   /*padding: 0 0 0.5rem 0;*/
 }
-main .menu__pic img {
+body main .menu__pic img {
   object-fit: cover;
   width: 100%;
   height: 20em;
 }
-main .menu__detail {
-  background-color: #f7f7f7;
+body main .menu__detail {
+  /*background-color: $gris-clair;*/
   position: relative;
   top: -4rem;
   border-radius: 50px 50px 0 0;
 }
-main .menu__detail__title {
+body main .menu__detail__title {
   font-family: "shrikhand";
   font-size: 1.2em;
   /*display: flex;*/
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
   /*background-color: aqua;*/
   /*align-items: center;*/
-  /* padding-top: 2rem;*/
+  padding-top: 2rem;
   border-radius: 50px 50px 0 0;
   display: flex;
-  justify-content: space-evenly;
-  /* background-color: $gris-clair;*/
+  justify-content: center;
+  background-color: #ffffff;
   align-items: center;
-  padding: 1rem 0 0.1rem 0;
+  padding: 1rem 0 1rem 0;
   margin-bottom: 2rem;
 }
-main .menu__detail ul {
+body main .menu__detail ul {
   font-family: "roboto";
-  padding: 0 1em 3em 1em;
+  padding: 0 1em 2em 1em;
 }
-main .menu__detail ul h3 {
+body main .menu__detail ul h3 {
   text-transform: uppercase;
-  font-weight: 100;
+  /*font-weight: 100;*/
   grid-template-columns: repeat(1, 1fr);
   padding-bottom: 1rem;
 }
-main .menu__detail ul li {
-  background-color: white;
+body main .menu__detail ul li {
+  /*background-color: white;*/
   font-weight: 400;
   margin-bottom: 1rem;
   border-radius: 15px;
   padding: 0.7em 1.5em 0.7em 1em;
   line-height: 1.5rem;
 }
-main .menu__detail ul li a {
+body main .menu__detail ul li a {
   color: black;
 }
-main .menu__detail ul li div {
+body main .menu__detail ul li div {
   display: flex;
   justify-content: space-between;
   text-overflow: ellipsis;
 }
-main .menu__detail__name {
+body main .menu__detail__name {
   font-weight: bold;
   font-size: 1.1em;
   color: black;
 }
-main .menu__detail__description {
+body main .menu__detail__description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   padding-right: 1em;
+}
+body main .order {
+  display: flex;
+  justify-content: center;
+}
+body .header {
+  display: flex;
+}
+body .header h1 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 footer {

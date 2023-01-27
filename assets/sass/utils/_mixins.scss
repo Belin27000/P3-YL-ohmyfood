@@ -20,6 +20,10 @@
         $section: $grid-columns-footer;
     }
 
+    @else if ($section=="header") {
+        $section: $grid-columns-header;
+    }
+
     grid-template-columns: repeat($section, 1fr);
 }
 
