@@ -1,12 +1,20 @@
 {
   "name": "p3-yl-ohmyfood",
   "version": "1.0.0",
-  "description": "P3_Ohmyfood",
+  "description": "p3-yl-ohmyfood",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./assets/sass/main.scss ./assets/css/style.css --no-source-map",
-    "prefix": "postcss model/css/index.css --use autoprefixer"
+    "prefix": "postcss modes/css/index.css --use autoprefixer"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belin27000/P3-YL-ohmyfood.git"
+  },
+  "author": "yl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Belin27000/P3-YL-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Belin27000/P3-YL-ohmyfood#readme"
 }
