@@ -51,9 +51,10 @@ main .menu__pic, main .restaurants, main .presentation, main .explore, header {
   justify-content: center;
 }
 
-main .menu__detail ul li, main .choice ul li {
+/*box shadow des */
+main .menu__detail ul li, main .restaurants a, main .choice ul li {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  border-radius: 1.5em;
 }
 
 .btn {
@@ -109,8 +110,9 @@ header h1 {
   font-family: "Shrikhand", cursive;
 }
 header .btn__retourHome {
-  width: 100%;
-  justify-self: start;
+  /*width: 100%;*/
+  /*justify-self: start;*/
+  padding-left: 2rem;
 }
 header .btn__retourHome i {
   font-size: 20px;
@@ -227,8 +229,6 @@ main .restaurants a {
   position: relative;
   padding: 0 0 0.7rem 0;
   color: #000000;
-  border-radius: 1.5em;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 main .restaurants a .sticker {
   position: absolute;
@@ -331,6 +331,15 @@ main .menu__detail__description {
   white-space: nowrap;
   overflow: hidden;
   padding-right: 1em;
+}
+
+body .header {
+  display: flex;
+}
+body .header__title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 footer {

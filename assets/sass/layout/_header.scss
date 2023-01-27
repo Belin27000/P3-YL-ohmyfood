@@ -11,8 +11,9 @@ header {
     }
 
     & .btn__retourHome {
-        width: 100%;
-        justify-self: start;
+        /*width: 100%;*/
+        /*justify-self: start;*/
+        padding-left: 2rem;
 
         & i {
             font-size: 20px;

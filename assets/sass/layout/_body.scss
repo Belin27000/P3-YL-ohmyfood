@@ -124,8 +124,8 @@ main {
             position: relative;
             padding: 0 0 0.7rem 0;
             color: $txt-fond-clair;
-            border-radius: 1.5em;
-            box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+            @extend %box-shadow-radius;
+
 
             & .sticker {
                 position: absolute;
@@ -163,6 +163,8 @@ main {
     /*Fin du code de la page d'acceuil*/
 
     /*Début du code des menu*/
+
+
     & .menu {
         background-color: $gris-clair;
 
@@ -172,7 +174,7 @@ main {
 
         &__pic {
             @extend %grid-center;
-            @include grid-template-set ($choice);
+            @include grid-template-set ($header);
             /*position: relative;*/
 
             /*padding: 0 0 0.5rem 0;*/
@@ -271,4 +273,16 @@ main {
 
     }
 
+}
+
+body {
+    & .header {
+        display: flex;
+
+        &__title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
