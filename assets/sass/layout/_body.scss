@@ -169,8 +169,6 @@ body {
 
 
         & .menu {
-            /*background-color: $gris-clair;*/
-
             & * {
                 font-weight: 400;
             }
@@ -186,10 +184,7 @@ body {
                     width: 100%;
                     height: 20em;
                 }
-
             }
-
-
 
             &__detail {
                 /*background-color: $gris-clair;*/
@@ -200,23 +195,13 @@ body {
                 &__title {
                     font-family: 'shrikhand';
                     font-size: 1.2em;
-
-                    /*display: flex;*/
-                    /*justify-content: space-evenly;*/
-                    /*background-color: aqua;*/
-                    /*align-items: center;*/
-                    padding-top: 2rem;
                     border-radius: 50px 50px 0 0;
-
-
                     display: flex;
                     justify-content: center;
                     background-color: $txt-fond-sombre;
                     align-items: center;
-                    padding: 1rem 0 1rem 0;
+                    padding: 1rem;
                     margin-bottom: 2rem;
-
-
                 }
 
                 & ul {
@@ -228,52 +213,109 @@ body {
                         /*font-weight: 100;*/
                         @include grid-template-set(1);
                         padding-bottom: 1rem;
+                        position: relative;
+
+                        /*souligne le texte du titre des différentes listes du menu*/
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            height: 2.5px;
+                            bottom: 0.5em;
+                            /*margin: 0 auto;*/
+                            left: 0;
+                            right: 0;
+                            width: 2.5em;
+                            background: $aqua-tertiaire;
+                        }
 
                     }
 
                     & li {
+                        display: flex;
+                        overflow: hidden;
+                        position: relative;
 
                         & a {
+                            width: 100%;
                             color: black;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            @extend %check-transition;
+
+                            &:hover {
+                                width: calc(100% - 5em);
+                                @extend %check-transition;
+                            }
+
+                            &:hover+.check {
+                                transition: all 1s;
+                                position: absolute;
+                                right: 0;
+
+                                & .fa-check-circle {
+                                    transform: rotate(360deg);
+                                    @extend %check-transition;
+                                }
+                            }
+
+                            & .item {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+
+                            }
                         }
 
-                        /*background-color: white;*/
+                        & .check {
+                            position: absolute;
+                            right: -5em;
+                            top: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            background-color: $aqua-tertiaire;
+                            width: 5em;
+                            height: 4.5em;
+                            @extend %check-transition;
+
+                            & .fa-check-circle {
+                                font-size: 1.5em;
+                                color: white;
+                                transform: rotate(-360deg);
+                            }
+                        }
+
+                        & p {
+                            height: 100%;
+                        }
+
                         font-weight: 400;
                         margin-bottom: 1rem;
                         border-radius: 15px;
                         padding: .7em 1.5em .7em 1em;
                         line-height: 1.5rem;
                         @extend %box-shadow-radius;
-
-                        & div {
-
-                            display: flex;
-                            justify-content: space-between;
-                            text-overflow: ellipsis;
-
-                        }
-
                     }
                 }
-
 
                 &__name {
                     font-weight: bold;
                     font-size: 1.1em;
                     color: black;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
 
                 &__description {
+                    /*coupe le texte de chaque item du menu*/
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
                     padding-right: 1em;
-
                 }
-
-
             }
-
         }
 
         & .order {
@@ -281,19 +323,33 @@ body {
             justify-content: center;
         }
 
-    }
+        & .rest1 {
+            & .starter {
+                @for $i from 1 through $Rest1-starter-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+        }
 
-    /*Postionnement du header des pages menu*/
-    & .header {
-        display: flex;
+        & .plate {
+            @for $i from 1 through $Rest1-plate-nb {
+                &__#{$i} {
+                    @include slideup;
+                    animation-delay: $i*.1s;
+                }
+            }
+        }
 
-        & h1 {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-
-
-
+        & .dessert {
+            @for $i from 1 through $Rest1-dessert-nb {
+                &__#{$i} {
+                    @include slideup;
+                    animation-delay: $i*.1s;
+                }
+            }
         }
     }
 }

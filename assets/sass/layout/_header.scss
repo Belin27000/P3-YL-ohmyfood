@@ -23,5 +23,12 @@ header {
         }
     }
 
+    /*Postionnement du header des pages menu + flèche retour*/
+    & .header__menu {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
 
 }

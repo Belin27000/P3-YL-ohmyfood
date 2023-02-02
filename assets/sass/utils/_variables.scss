@@ -30,3 +30,34 @@ $grid-columns-choice: 1;
 $grid-columns-Restaurants: 4;
 $grid-columns-footer: 3;
 $grid-columns-header: 1;
+
+
+
+//Nombre d'entrée
+$starter-rest1: 3;
+$starter-rest2: 4;
+$starter-rest3: 3;
+$starter-rest4: 3;
+
+//Nombre de plats
+$plate-rest1: 3;
+$plate-rest2: 3;
+$plate-rest3: 3;
+$plate-rest4: 3;
+
+//Nombre de desserts
+$dessert-Rest1: 3;
+$dessert-Rest2: 3;
+$dessert-Rest3: 3;
+$dessert-Rest4: 3;
+
+
+//Variable d'affichage keyframe restaurant 1
+$Rest1-starter-nb: $starter-rest1+1;
+$Rest1-plate-nb: $plate-rest1+1;
+$Rest1-dessert-nb: $dessert-Rest1+1;
+
+//Variable d'affichage keyframe restaurant 1
+$Rest2-starter-nb: $starter-rest2+1;
+$Rest2-plate-nb: $plate-rest2+1;
+$Rest2-dessert-nb: $dessert-Rest2+1;

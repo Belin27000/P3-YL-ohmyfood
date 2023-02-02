@@ -45,6 +45,17 @@ br {
   margin-bottom: 10px;
 }
 
+@keyframes slideup {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*Animation affiochage page menu*/
 body main .menu__pic, body main .restaurants, body main .presentation, body main .explore, header, .btn {
   display: grid;
   align-items: center;
@@ -55,6 +66,10 @@ body main .menu__pic, body main .restaurants, body main .presentation, body main
 body main .menu__detail ul li, body main .restaurants a, body main .choice ul li {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.5em;
+}
+
+body main .menu__detail ul li .check, body main .menu__detail ul li a:hover + .check .fa-check-circle, body main .menu__detail ul li a:hover, body main .menu__detail ul li a {
+  transition: all 1s;
 }
 
 .btn {
@@ -110,6 +125,7 @@ body main .menu__detail ul li, body main .restaurants a, body main .choice ul li
 header {
   padding: 1em 0 1em 0;
   width: 100%;
+  /*Postionnement du header des pages menu + flèche retour*/
 }
 header h1 {
   font-family: "Shrikhand", cursive;
@@ -124,11 +140,13 @@ header .btn__retourHome i {
   font-size: 20px;
   padding-left: 2rem;
 }
+header .header__menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 /*Début du code de la page d'acceuil*/
-body {
-  /*Postionnement du header des pages menu*/
-}
 body main {
   /*Fin du code de la page d'acceuil*/
   /*Début du code des menu*/
@@ -267,9 +285,6 @@ body main .restaurants a .btn__like {
   font-size: 1.5em;
   cursor: pointer;
 }
-body main .menu {
-  /*background-color: $gris-clair;*/
-}
 body main .menu * {
   font-weight: 400;
 }
@@ -292,17 +307,12 @@ body main .menu__detail {
 body main .menu__detail__title {
   font-family: "shrikhand";
   font-size: 1.2em;
-  /*display: flex;*/
-  /*justify-content: space-evenly;*/
-  /*background-color: aqua;*/
-  /*align-items: center;*/
-  padding-top: 2rem;
   border-radius: 50px 50px 0 0;
   display: flex;
   justify-content: center;
   background-color: #ffffff;
   align-items: center;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem;
   margin-bottom: 2rem;
 }
 body main .menu__detail ul {
@@ -314,9 +324,24 @@ body main .menu__detail ul h3 {
   /*font-weight: 100;*/
   grid-template-columns: repeat(1, 1fr);
   padding-bottom: 1rem;
+  position: relative;
+  /*souligne le texte du titre des différentes listes du menu*/
+}
+body main .menu__detail ul h3::after {
+  position: absolute;
+  content: "";
+  height: 2.5px;
+  bottom: 0.5em;
+  /*margin: 0 auto;*/
+  left: 0;
+  right: 0;
+  width: 2.5em;
+  background: #99E2D0;
 }
 body main .menu__detail ul li {
-  /*background-color: white;*/
+  display: flex;
+  overflow: hidden;
+  position: relative;
   font-weight: 400;
   margin-bottom: 1rem;
   border-radius: 15px;
@@ -324,19 +349,57 @@ body main .menu__detail ul li {
   line-height: 1.5rem;
 }
 body main .menu__detail ul li a {
+  width: 100%;
   color: black;
-}
-body main .menu__detail ul li div {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+}
+body main .menu__detail ul li a:hover {
+  width: calc(100% - 5em);
+}
+body main .menu__detail ul li a:hover + .check {
+  transition: all 1s;
+  position: absolute;
+  right: 0;
+}
+body main .menu__detail ul li a:hover + .check .fa-check-circle {
+  transform: rotate(360deg);
+}
+body main .menu__detail ul li a .item {
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
+}
+body main .menu__detail ul li .check {
+  position: absolute;
+  right: -5em;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #99E2D0;
+  width: 5em;
+  height: 4.5em;
+}
+body main .menu__detail ul li .check .fa-check-circle {
+  font-size: 1.5em;
+  color: white;
+  transform: rotate(-360deg);
+}
+body main .menu__detail ul li p {
+  height: 100%;
 }
 body main .menu__detail__name {
   font-weight: bold;
   font-size: 1.1em;
   color: black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body main .menu__detail__description {
+  /*coupe le texte de chaque item du menu*/
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -346,13 +409,89 @@ body main .order {
   display: flex;
   justify-content: center;
 }
-body .header {
-  display: flex;
+body main .rest1 .starter__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
 }
-body .header h1 {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+body main .rest1 .starter__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+body main .rest1 .starter__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+body main .rest1 .starter__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+body main .plate__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+body main .plate__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+body main .plate__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+body main .plate__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+body main .dessert__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+body main .dessert__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+body main .dessert__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+body main .dessert__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
 }
 
 footer {
