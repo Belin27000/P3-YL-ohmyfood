@@ -1,5 +1,15 @@
 /*Début du code de la page d'acceuil*/
 body {
+    & .loader {
+        /*position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;*/
+    }
+
     main {
         & .explore {
             @extend %grid-center;
@@ -210,22 +220,14 @@ body {
 
                     & h3 {
                         text-transform: uppercase;
-                        /*font-weight: 100;*/
+                        font-weight: 300;
                         @include grid-template-set(1);
                         padding-bottom: 1rem;
                         position: relative;
 
                         /*souligne le texte du titre des différentes listes du menu*/
                         &::after {
-                            position: absolute;
-                            content: '';
-                            height: 2.5px;
-                            bottom: 0.5em;
-                            /*margin: 0 auto;*/
-                            left: 0;
-                            right: 0;
-                            width: 2.5em;
-                            background: $aqua-tertiaire;
+                            @extend %title__underline;
                         }
 
                     }
@@ -234,6 +236,13 @@ body {
                         display: flex;
                         overflow: hidden;
                         position: relative;
+                        cursor: pointer;
+                        font-weight: 400;
+                        margin-bottom: 1rem;
+                        border-radius: 15px;
+                        padding: .7em 1.5em .7em 1em;
+                        line-height: 1.5rem;
+                        @extend %box-shadow-radius;
 
                         & a {
                             width: 100%;
@@ -241,61 +250,63 @@ body {
                             display: flex;
                             justify-content: space-between;
                             align-items: flex-end;
-                            @extend %check-transition;
-
-                            &:hover {
-                                width: calc(100% - 5em);
-                                @extend %check-transition;
-                            }
-
-                            &:hover+.check {
-                                transition: all 1s;
-                                position: absolute;
-                                right: 0;
-
-                                & .fa-check-circle {
-                                    transform: rotate(360deg);
-                                    @extend %check-transition;
-                                }
-                            }
 
                             & .item {
                                 white-space: nowrap;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
+                                width: 85%;
 
                             }
+
+                            & strong {
+                                position: absolute;
+                                right: 2rem;
+                                bottom: 1rem;
+                                @extend %check-transition;
+                                font-weight: 600;
+                            }
+
+                            & .check {
+                                position: absolute;
+                                top: 0;
+                                right: -5em;
+                                width: 5em;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $aqua-tertiaire;
+                                color: $txt-fond-sombre;
+                                @extend %check-transition;
+
+                                & i {
+                                    font-size: 1.5em;
+                                    transform: rotate(-360deg);
+
+                                }
+                            }
+                        }
+                    }
+
+                    & li:hover {
+                        & .item {
+                            width: 65%;
                         }
 
                         & .check {
-                            position: absolute;
-                            right: -5em;
-                            top: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                            background-color: $aqua-tertiaire;
-                            width: 5em;
-                            height: 4.5em;
-                            @extend %check-transition;
+                            right: 0;
 
-                            & .fa-check-circle {
-                                font-size: 1.5em;
-                                color: white;
-                                transform: rotate(-360deg);
+                            & i {
+                                transform: rotate(0deg);
+                                @extend %check-transition;
+
                             }
                         }
 
-                        & p {
-                            height: 100%;
+                        & strong {
+                            right: 6.5rem;
                         }
-
-                        font-weight: 400;
-                        margin-bottom: 1rem;
-                        border-radius: 15px;
-                        padding: .7em 1.5em .7em 1em;
-                        line-height: 1.5rem;
-                        @extend %box-shadow-radius;
                     }
                 }
 
@@ -314,6 +325,7 @@ body {
                     white-space: nowrap;
                     overflow: hidden;
                     padding-right: 1em;
+                    font-weight: 300;
                 }
             }
         }
