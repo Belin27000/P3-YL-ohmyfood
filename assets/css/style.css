@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +45,17 @@ br {
   margin-bottom: 10px;
 }
 
+@keyframes slideup {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*Animation affiochage page menu*/
 body main .menu__pic, body main .restaurants, body main .presentation, body main .explore, header, .btn {
   display: grid;
   align-items: center;
@@ -55,6 +66,17 @@ body main .menu__pic, body main .restaurants, body main .presentation, body main
 body main .menu__detail ul li, body main .restaurants a, body main .choice ul li {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.5em;
+}
+
+body main .menu__detail ul h3::after {
+  content: "";
+  border-bottom: 3px #99E2D0 solid;
+  width: 3em;
+  display: block;
+}
+
+body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .check, body main .menu__detail ul li a strong {
+  transition: all 0.5s;
 }
 
 .btn {
@@ -110,6 +132,7 @@ body main .menu__detail ul li, body main .restaurants a, body main .choice ul li
 header {
   padding: 1em 0 1em 0;
   width: 100%;
+  /*Postionnement du header des pages menu + flèche retour*/
 }
 header h1 {
   font-family: "Shrikhand", cursive;
@@ -124,10 +147,21 @@ header .btn__retourHome i {
   font-size: 20px;
   padding-left: 2rem;
 }
+header .header__menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 /*Début du code de la page d'acceuil*/
-body {
-  /*Postionnement du header des pages menu*/
+body .loader {
+  /*position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
 }
 body main {
   /*Fin du code de la page d'acceuil*/
@@ -267,9 +301,6 @@ body main .restaurants a .btn__like {
   font-size: 1.5em;
   cursor: pointer;
 }
-body main .menu {
-  /*background-color: $gris-clair;*/
-}
 body main .menu * {
   font-weight: 400;
 }
@@ -292,17 +323,12 @@ body main .menu__detail {
 body main .menu__detail__title {
   font-family: "shrikhand";
   font-size: 1.2em;
-  /*display: flex;*/
-  /*justify-content: space-evenly;*/
-  /*background-color: aqua;*/
-  /*align-items: center;*/
-  padding-top: 2rem;
   border-radius: 50px 50px 0 0;
   display: flex;
   justify-content: center;
   background-color: #ffffff;
   align-items: center;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem;
   margin-bottom: 2rem;
 }
 body main .menu__detail ul {
@@ -311,12 +337,17 @@ body main .menu__detail ul {
 }
 body main .menu__detail ul h3 {
   text-transform: uppercase;
-  /*font-weight: 100;*/
+  font-weight: 300;
   grid-template-columns: repeat(1, 1fr);
   padding-bottom: 1rem;
+  position: relative;
+  /*souligne le texte du titre des différentes listes du menu*/
 }
 body main .menu__detail ul li {
-  /*background-color: white;*/
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
   font-weight: 400;
   margin-bottom: 1rem;
   border-radius: 15px;
@@ -324,35 +355,155 @@ body main .menu__detail ul li {
   line-height: 1.5rem;
 }
 body main .menu__detail ul li a {
+  width: 100%;
   color: black;
-}
-body main .menu__detail ul li div {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+}
+body main .menu__detail ul li a .item {
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
+  width: 85%;
+}
+body main .menu__detail ul li a strong {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  font-weight: 600;
+}
+body main .menu__detail ul li a .check {
+  position: absolute;
+  top: 0;
+  right: -5em;
+  width: 5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: #ffffff;
+}
+body main .menu__detail ul li a .check i {
+  font-size: 1.5em;
+  transform: rotate(-360deg);
+}
+body main .menu__detail ul li:hover .item {
+  width: 65%;
+}
+body main .menu__detail ul li:hover .check {
+  right: 0;
+}
+body main .menu__detail ul li:hover .check i {
+  transform: rotate(0deg);
+}
+body main .menu__detail ul li:hover strong {
+  right: 6.5rem;
 }
 body main .menu__detail__name {
   font-weight: bold;
   font-size: 1.1em;
   color: black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body main .menu__detail__description {
+  /*coupe le texte de chaque item du menu*/
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   padding-right: 1em;
+  font-weight: 300;
 }
 body main .order {
   display: flex;
   justify-content: center;
 }
-body .header {
-  display: flex;
+body main .rest1 .starter__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
 }
-body .header h1 {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+body main .rest1 .starter__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+body main .rest1 .starter__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+body main .rest1 .starter__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+body main .plate__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+body main .plate__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+body main .plate__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+body main .plate__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+body main .dessert__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+body main .dessert__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+body main .dessert__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+body main .dessert__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
 }
 
 footer {

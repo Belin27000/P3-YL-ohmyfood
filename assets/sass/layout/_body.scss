@@ -1,5 +1,15 @@
 /*Début du code de la page d'acceuil*/
 body {
+    & .loader {
+        /*position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;*/
+    }
+
     main {
         & .explore {
             @extend %grid-center;
@@ -169,8 +179,6 @@ body {
 
 
         & .menu {
-            /*background-color: $gris-clair;*/
-
             & * {
                 font-weight: 400;
             }
@@ -186,10 +194,7 @@ body {
                     width: 100%;
                     height: 20em;
                 }
-
             }
-
-
 
             &__detail {
                 /*background-color: $gris-clair;*/
@@ -200,23 +205,13 @@ body {
                 &__title {
                     font-family: 'shrikhand';
                     font-size: 1.2em;
-
-                    /*display: flex;*/
-                    /*justify-content: space-evenly;*/
-                    /*background-color: aqua;*/
-                    /*align-items: center;*/
-                    padding-top: 2rem;
                     border-radius: 50px 50px 0 0;
-
-
                     display: flex;
                     justify-content: center;
                     background-color: $txt-fond-sombre;
                     align-items: center;
-                    padding: 1rem 0 1rem 0;
+                    padding: 1rem;
                     margin-bottom: 2rem;
-
-
                 }
 
                 & ul {
@@ -225,19 +220,23 @@ body {
 
                     & h3 {
                         text-transform: uppercase;
-                        /*font-weight: 100;*/
+                        font-weight: 300;
                         @include grid-template-set(1);
                         padding-bottom: 1rem;
+                        position: relative;
+
+                        /*souligne le texte du titre des différentes listes du menu*/
+                        &::after {
+                            @extend %title__underline;
+                        }
 
                     }
 
                     & li {
-
-                        & a {
-                            color: black;
-                        }
-
-                        /*background-color: white;*/
+                        display: flex;
+                        overflow: hidden;
+                        position: relative;
+                        cursor: pointer;
                         font-weight: 400;
                         margin-bottom: 1rem;
                         border-radius: 15px;
@@ -245,35 +244,90 @@ body {
                         line-height: 1.5rem;
                         @extend %box-shadow-radius;
 
-                        & div {
-
+                        & a {
+                            width: 100%;
+                            color: black;
                             display: flex;
                             justify-content: space-between;
-                            text-overflow: ellipsis;
+                            align-items: flex-end;
 
+                            & .item {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                width: 85%;
+
+                            }
+
+                            & strong {
+                                position: absolute;
+                                right: 2rem;
+                                bottom: 1rem;
+                                @extend %check-transition;
+                                font-weight: 600;
+                            }
+
+                            & .check {
+                                position: absolute;
+                                top: 0;
+                                right: -5em;
+                                width: 5em;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $aqua-tertiaire;
+                                color: $txt-fond-sombre;
+                                @extend %check-transition;
+
+                                & i {
+                                    font-size: 1.5em;
+                                    transform: rotate(-360deg);
+
+                                }
+                            }
+                        }
+                    }
+
+                    & li:hover {
+                        & .item {
+                            width: 65%;
                         }
 
+                        & .check {
+                            right: 0;
+
+                            & i {
+                                transform: rotate(0deg);
+                                @extend %check-transition;
+
+                            }
+                        }
+
+                        & strong {
+                            right: 6.5rem;
+                        }
                     }
                 }
-
 
                 &__name {
                     font-weight: bold;
                     font-size: 1.1em;
                     color: black;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
 
                 &__description {
+                    /*coupe le texte de chaque item du menu*/
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
                     padding-right: 1em;
-
+                    font-weight: 300;
                 }
-
-
             }
-
         }
 
         & .order {
@@ -281,19 +335,33 @@ body {
             justify-content: center;
         }
 
-    }
+        & .rest1 {
+            & .starter {
+                @for $i from 1 through $Rest1-starter-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+        }
 
-    /*Postionnement du header des pages menu*/
-    & .header {
-        display: flex;
+        & .plate {
+            @for $i from 1 through $Rest1-plate-nb {
+                &__#{$i} {
+                    @include slideup;
+                    animation-delay: $i*.1s;
+                }
+            }
+        }
 
-        & h1 {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-
-
-
+        & .dessert {
+            @for $i from 1 through $Rest1-dessert-nb {
+                &__#{$i} {
+                    @include slideup;
+                    animation-delay: $i*.1s;
+                }
+            }
         }
     }
 }

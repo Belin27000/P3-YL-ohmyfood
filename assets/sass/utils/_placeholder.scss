@@ -10,3 +10,14 @@
     box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
     border-radius: 1.5em;
 }
+
+%title__underline {
+    content: '';
+    border-bottom: 3px $aqua-tertiaire solid;
+    width: 3em;
+    display: block;
+}
+
+%check-transition {
+    transition: all .5s;
+}

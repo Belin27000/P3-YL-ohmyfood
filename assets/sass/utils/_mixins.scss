@@ -37,3 +37,18 @@
 @mixin choice__list-hover ($color-primary) {
     background-color: lighten($color-primary, 32%);
 }
+
+/*Animation affiochage page menu*/
+@mixin slideup {
+    animation-name: slideup;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+
+@mixin check__appear-hover {
+    animation-name: ckeckappear;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
