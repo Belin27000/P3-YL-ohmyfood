@@ -336,6 +336,7 @@ body {
 
         }
 
+        /*animation affichage page La palette du goût*/
         & .rest1 {
             & .starter {
                 @for $i from 1 through $Rest1-starter-nb {
@@ -345,22 +346,115 @@ body {
                     }
                 }
             }
-        }
 
-        & .plate {
-            @for $i from 1 through $Rest1-plate-nb {
-                &__#{$i} {
-                    @include slideup;
-                    animation-delay: $i*.1s;
+            & .plate {
+                @for $i from 1 through $Rest1-plate-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+            & .dessert {
+                @for $i from 1 through $Rest1-dessert-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
                 }
             }
         }
 
-        & .dessert {
-            @for $i from 1 through $Rest1-dessert-nb {
-                &__#{$i} {
-                    @include slideup;
-                    animation-delay: $i*.1s;
+        /*animation affichage page La note enchantée*/
+        & .rest2 {
+            & .starter {
+                @for $i from 1 through $Rest2-starter-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+
+            & .plate {
+                @for $i from 1 through $Rest2-plate-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+            & .dessert {
+                @for $i from 1 through $Rest2-dessert-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+        }
+
+        /*animation affichage page À la française*/
+        & .rest3 {
+            & .starter {
+                @for $i from 1 through $Rest3-starter-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+
+            & .plate {
+                @for $i from 1 through $Rest3-plate-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+            & .dessert {
+                @for $i from 1 through $Rest3-dessert-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+        }
+
+        /*animation affichage page Le Delice des sens*/
+        & .rest4 {
+            & .starter {
+                @for $i from 1 through $Rest4-starter-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+
+            & .plate {
+                @for $i from 1 through $Rest4-plate-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
+                }
+            }
+
+            & .dessert {
+                @for $i from 1 through $Rest4-dessert-nb {
+                    &__#{$i} {
+                        @include slideup;
+                        animation-delay: $i*.1s;
+                    }
                 }
             }
         }

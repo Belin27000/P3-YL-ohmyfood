@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -50,20 +51,29 @@ br {
     transform: translateY(1rem);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
 /*Animation affiochage page menu*/
-body main .menu__pic, body main .restaurants, body main .presentation, body main .explore, header, .btn {
+body main .menu__pic,
+body main .restaurants,
+body main .presentation,
+body main .explore,
+header,
+.btn {
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
 /*box shadow des */
-body main .menu__detail ul li, body main .restaurants a, body main .choice ul li {
+body main .menu__detail ul li,
+body main .restaurants a,
+body main .choice ul li {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.5em;
 }
@@ -75,7 +85,9 @@ body main .menu__detail ul h3::after {
   display: block;
 }
 
-body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .check, body main .menu__detail ul li a strong {
+body main .menu__detail ul li:hover .check i,
+body main .menu__detail ul li a .check,
+body main .menu__detail ul li a strong {
   transition: all 0.5s;
 }
 
@@ -84,9 +96,11 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   align-self: center;
   width: 40%;
 }
+
 .btn--gradient {
   background: linear-gradient(350deg, rgb(147, 86, 220) 9%, rgb(255, 121, 218) 70%);
 }
+
 .btn--radius {
   /*background: rgb(147, 86, 220);*/
   /*padding: .7rem 1rem;*/
@@ -95,6 +109,7 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   padding: 1rem;
   /*margin-bottom: 2rem;*/
 }
+
 .btn__retourHome {
   color: black;
 }
@@ -104,12 +119,14 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   padding-left: 1em;
   /*display: flex;*/
 }
+
 .btn__like .heart-away {
   display: block;
   position: absolute;
   transform: scale(1);
   transition: all 0.5s;
 }
+
 .btn__like .heart-hover {
   /*display: block;*/
   transform: scale(0);
@@ -128,6 +145,7 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   opacity: 0;
   transform: scale(0);
 }
+
 .btn__like:hover .heart-hover {
   opacity: 1;
   transform: scale(1);
@@ -138,19 +156,23 @@ header {
   width: 100%;
   /*Postionnement du header des pages menu + flèche retour*/
 }
+
 header h1 {
   font-family: "Shrikhand", cursive;
 }
+
 header .btn__retourHome {
   /*width: 100%;*/
   /*justify-self: start;*/
   width: 100%;
   position: absolute;
 }
+
 header .btn__retourHome i {
   font-size: 20px;
   padding-left: 2rem;
 }
+
 header .header__menu {
   display: flex;
   width: 100%;
@@ -167,35 +189,48 @@ body .loader {
   justify-content: center;
   align-items: center;*/
 }
+
 body main {
   /*Fin du code de la page d'acceuil*/
   /*Début du code des menu*/
+  /*animation affichage page La palette du goût*/
+  /*animation affichage page La note enchantée*/
+  /*animation affichage page À la française*/
+  /*animation affichage page Le Delice des sens*/
 }
+
 body main .explore {
   padding: 1em;
   background: #eaeaea;
 }
+
 body main .explore i {
   padding: 0 0.5em 0 0;
 }
+
 body main .presentation {
   justify-items: center;
   padding: 2em 0 3em;
   background: #f7f7f7;
   text-align: center;
 }
+
 body main .presentation h2 {
   padding: 0;
 }
+
 body main .presentation p {
   padding: 1em 5em 2em;
 }
+
 body main .choice {
   padding: 3em 1em;
 }
+
 body main .choice h2 {
   justify-self: start;
 }
+
 body main .choice ul {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -204,21 +239,26 @@ body main .choice ul {
   justify-self: normal;
   counter-reset: section;
 }
+
 body main .choice ul li {
   font-size: 1em;
   padding: 1.5em;
   background-color: #f7f7f7;
+  cursor: pointer;
 }
+
 @media screen and (min-width: 768px) {
   body main .choice ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (min-width: 1024px) {
   body main .choice ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 body main .choice li::before {
   counter-increment: section;
   content: counter(section);
@@ -229,28 +269,35 @@ body main .choice li::before {
   background-color: #9356DC;
   color: #ffffff;
 }
+
 body main .choice li:hover {
   background-color: #f2eafb;
 }
+
 body main .choice li:hover i {
   color: #9356DC;
 }
+
 body main .choice p {
   display: inline-block;
   position: relative;
   left: -0.7em;
 }
+
 body main .choice i {
   padding: 0 1em 0 0;
 }
+
 body main .restaurants {
   grid-template-columns: repeat(1, 1fr);
   padding: 3em 1em;
   background: #f7f7f7;
 }
+
 body main .restaurants h2 {
   justify-self: start;
 }
+
 body main .restaurants ul {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -258,26 +305,31 @@ body main .restaurants ul {
   justify-self: normal;
   margin: 1em 0;
 }
+
 @media screen and (min-width: 768px) {
   body main .restaurants ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (min-width: 1024px) {
   body main .restaurants ul {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 body main .restaurants ul li {
   display: inline-block;
   width: 100%;
 }
+
 body main .restaurants a {
   display: block;
   position: relative;
   padding: 0 0 0.7rem 0;
   color: #000000;
 }
+
 body main .restaurants a .sticker {
   position: absolute;
   right: 1em;
@@ -287,6 +339,7 @@ body main .restaurants a .sticker {
   background: #99e2d0;
   border-radius: 0.2em;
 }
+
 body main .restaurants a img {
   padding: 0 0 0.5rem 0;
   width: 100%;
@@ -294,10 +347,12 @@ body main .restaurants a img {
   object-fit: cover;
   border-radius: 1.5em 1.5em 0 0;
 }
+
 body main .restaurants a h3,
 body main .restaurants a p {
   padding: 0 1rem 0.5rem;
 }
+
 body main .restaurants a .btn__like {
   position: absolute;
   bottom: 2.5rem;
@@ -305,25 +360,30 @@ body main .restaurants a .btn__like {
   font-size: 1.5em;
   cursor: pointer;
 }
+
 body main .menu * {
   font-weight: 400;
 }
+
 body main .menu__pic {
   grid-template-columns: repeat(1, 1fr);
   /*position: relative;*/
   /*padding: 0 0 0.5rem 0;*/
 }
+
 body main .menu__pic img {
   object-fit: cover;
   width: 100%;
   height: 20em;
 }
+
 body main .menu__detail {
   /*background-color: $gris-clair;*/
   position: relative;
   top: -4rem;
   border-radius: 50px 50px 0 0;
 }
+
 body main .menu__detail__title {
   font-family: "shrikhand";
   font-size: 1.2em;
@@ -335,10 +395,12 @@ body main .menu__detail__title {
   padding: 1rem;
   margin-bottom: 2rem;
 }
+
 body main .menu__detail ul {
   font-family: "roboto";
   padding: 0 1em 2em 1em;
 }
+
 body main .menu__detail ul h3 {
   text-transform: uppercase;
   font-weight: 300;
@@ -347,6 +409,7 @@ body main .menu__detail ul h3 {
   position: relative;
   /*souligne le texte du titre des différentes listes du menu*/
 }
+
 body main .menu__detail ul li {
   display: flex;
   overflow: hidden;
@@ -358,6 +421,7 @@ body main .menu__detail ul li {
   padding: 0.7em 1.5em 0.7em 1em;
   line-height: 1.5rem;
 }
+
 body main .menu__detail ul li a {
   width: 100%;
   color: black;
@@ -365,18 +429,21 @@ body main .menu__detail ul li a {
   justify-content: space-between;
   align-items: flex-end;
 }
+
 body main .menu__detail ul li a .item {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 85%;
 }
+
 body main .menu__detail ul li a strong {
   position: absolute;
   right: 2rem;
   bottom: 1rem;
   font-weight: 600;
 }
+
 body main .menu__detail ul li a .check {
   position: absolute;
   top: 0;
@@ -389,22 +456,28 @@ body main .menu__detail ul li a .check {
   background-color: #99E2D0;
   color: #ffffff;
 }
+
 body main .menu__detail ul li a .check i {
   font-size: 1.5em;
   transform: rotate(-360deg);
 }
+
 body main .menu__detail ul li:hover .item {
   width: 65%;
 }
+
 body main .menu__detail ul li:hover .check {
   right: 0;
 }
+
 body main .menu__detail ul li:hover .check i {
   transform: rotate(0deg);
 }
+
 body main .menu__detail ul li:hover strong {
   right: 6.5rem;
 }
+
 body main .menu__detail__name {
   font-weight: bold;
   font-size: 1.1em;
@@ -413,6 +486,7 @@ body main .menu__detail__name {
   white-space: nowrap;
   overflow: hidden;
 }
+
 body main .menu__detail__description {
   /*coupe le texte de chaque item du menu*/
   text-overflow: ellipsis;
@@ -421,10 +495,12 @@ body main .menu__detail__description {
   padding-right: 1em;
   font-weight: 300;
 }
+
 body main .order {
   display: flex;
   justify-content: center;
 }
+
 body main .rest1 .starter__1 {
   animation-name: slideup;
   animation-duration: 1s;
@@ -432,6 +508,7 @@ body main .rest1 .starter__1 {
   animation-fill-mode: backwards;
   animation-delay: 0.1s;
 }
+
 body main .rest1 .starter__2 {
   animation-name: slideup;
   animation-duration: 1s;
@@ -439,6 +516,7 @@ body main .rest1 .starter__2 {
   animation-fill-mode: backwards;
   animation-delay: 0.2s;
 }
+
 body main .rest1 .starter__3 {
   animation-name: slideup;
   animation-duration: 1s;
@@ -446,6 +524,7 @@ body main .rest1 .starter__3 {
   animation-fill-mode: backwards;
   animation-delay: 0.3s;
 }
+
 body main .rest1 .starter__4 {
   animation-name: slideup;
   animation-duration: 1s;
@@ -453,56 +532,360 @@ body main .rest1 .starter__4 {
   animation-fill-mode: backwards;
   animation-delay: 0.4s;
 }
-body main .plate__1 {
+
+body main .rest1 .plate__1 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.1s;
 }
-body main .plate__2 {
+
+body main .rest1 .plate__2 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.2s;
 }
-body main .plate__3 {
+
+body main .rest1 .plate__3 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.3s;
 }
-body main .plate__4 {
+
+body main .rest1 .plate__4 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.4s;
 }
-body main .dessert__1 {
+
+body main .rest1 .dessert__1 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.1s;
 }
-body main .dessert__2 {
+
+body main .rest1 .dessert__2 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.2s;
 }
-body main .dessert__3 {
+
+body main .rest1 .dessert__3 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   animation-delay: 0.3s;
 }
-body main .dessert__4 {
+
+body main .rest1 .dessert__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest2 .starter__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest2 .starter__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest2 .starter__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest2 .starter__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest2 .starter__5 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+}
+
+body main .rest2 .plate__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest2 .plate__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest2 .plate__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest2 .plate__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest2 .dessert__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest2 .dessert__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest2 .dessert__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest2 .dessert__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest3 .starter__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest3 .starter__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest3 .starter__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest3 .starter__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest3 .plate__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest3 .plate__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest3 .plate__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest3 .plate__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest3 .dessert__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest3 .dessert__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest3 .dessert__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest3 .dessert__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest4 .starter__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest4 .starter__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest4 .starter__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest4 .starter__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest4 .plate__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest4 .plate__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest4 .plate__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest4 .plate__4 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.4s;
+}
+
+body main .rest4 .dessert__1 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.1s;
+}
+
+body main .rest4 .dessert__2 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+body main .rest4 .dessert__3 {
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+}
+
+body main .rest4 .dessert__4 {
   animation-name: slideup;
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -514,18 +897,23 @@ footer {
   background-color: #353535;
   color: #ffffff;
 }
+
 footer h2 {
   padding: 1em;
 }
+
 footer ul {
   padding-bottom: 2em;
 }
+
 footer ul li {
   padding: 0.2em 0 0.2em 1rem;
 }
+
 footer ul li a {
   color: #ffffff;
 }
+
 footer ul li a i {
   padding-right: 1em;
 }
