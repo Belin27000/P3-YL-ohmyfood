@@ -95,9 +95,13 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   padding: 1rem;
   /*margin-bottom: 2rem;*/
 }
+.btn__retourHome {
+  color: black;
+}
 
 .btn__like {
-  padding-left: 2em;
+  cursor: pointer;
+  padding-left: 1em;
   /*display: flex;*/
 }
 .btn__like .heart-away {
