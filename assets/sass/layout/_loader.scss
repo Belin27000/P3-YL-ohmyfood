@@ -23,7 +23,6 @@ body {
 
             @for $i from 1 through $letter {
                 &__#{$i} {
-                    /*@include slideup;*/
                     animation: loading 3s ease infinite;
                     animation-delay: $i*.1s;
                 }
@@ -36,8 +35,6 @@ body {
             animation-name: fade;
             animation-iteration-count: linear;
             animation-fill-mode: forwards;
-            /*animation-delay: 3s;*/
-            /*z-index: 0;*/
         }
 
     }

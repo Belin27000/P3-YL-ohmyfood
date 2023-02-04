@@ -1,7 +1,6 @@
 .btn__like {
     cursor: pointer;
     padding-left: 1em;
-    /*display: flex;*/
 
     & .heart-away {
         display: block;
@@ -11,10 +10,10 @@
     }
 
     & .heart-hover {
-        /*display: block;*/
+
         transform: scale(0);
         transition: all 0.5s;
-        /*position: absolute;*/
+
         top: 0;
 
         //Coloris
