@@ -220,7 +220,7 @@ body .loader .letter__8 {
 body .loader--hidden {
   animation: fade 3s linear;
   animation-delay: 3s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   /*animation-delay: 3s;*/
   /*z-index: 0;*/
 }
