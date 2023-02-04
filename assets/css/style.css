@@ -7,7 +7,6 @@
 
 html {
   line-height: 1.15;
-  /* 1 */
 }
 
 h1 {
@@ -108,12 +107,9 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   background: linear-gradient(350deg, rgb(147, 86, 220) 9%, rgb(255, 121, 218) 70%);
 }
 .btn--radius {
-  /*background: rgb(147, 86, 220);*/
-  /*padding: .7rem 1rem;*/
   border-radius: 25px;
   border: none;
   padding: 1rem;
-  /*margin-bottom: 2rem;*/
 }
 .btn--radius:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
@@ -125,7 +121,6 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
 .btn__like {
   cursor: pointer;
   padding-left: 1em;
-  /*display: flex;*/
 }
 .btn__like .heart-away {
   display: block;
@@ -134,10 +129,8 @@ body main .menu__detail ul li:hover .check i, body main .menu__detail ul li a .c
   transition: all 0.5s;
 }
 .btn__like .heart-hover {
-  /*display: block;*/
   transform: scale(0);
   transition: all 0.5s;
-  /*position: absolute;*/
   top: 0;
   background-color: black;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
@@ -178,42 +171,34 @@ body .loader .letter {
   color: transparent;
 }
 body .loader .letter__1 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.1s;
 }
 body .loader .letter__2 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.2s;
 }
 body .loader .letter__3 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.3s;
 }
 body .loader .letter__4 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.4s;
 }
 body .loader .letter__5 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.5s;
 }
 body .loader .letter__6 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.6s;
 }
 body .loader .letter__7 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.7s;
 }
 body .loader .letter__8 {
-  /*@include slideup;*/
   animation: loading 3s ease infinite;
   animation-delay: 0.8s;
 }
@@ -223,8 +208,6 @@ body .loader--hidden {
   animation-name: fade;
   animation-iteration-count: linear;
   animation-fill-mode: forwards;
-  /*animation-delay: 3s;*/
-  /*z-index: 0;*/
 }
 
 header {
@@ -236,8 +219,6 @@ header h1 {
   font-family: "Shrikhand", cursive;
 }
 header .btn__retourHome {
-  /*width: 100%;*/
-  /*justify-self: start;*/
   width: 100%;
   position: absolute;
 }
@@ -400,8 +381,6 @@ body main .menu * {
 }
 body main .menu__pic {
   grid-template-columns: repeat(1, 1fr);
-  /*position: relative;*/
-  /*padding: 0 0 0.5rem 0;*/
 }
 body main .menu__pic img {
   object-fit: cover;
@@ -409,7 +388,6 @@ body main .menu__pic img {
   height: 20em;
 }
 body main .menu__detail {
-  /*background-color: $gris-clair;*/
   position: relative;
   top: -4rem;
   border-radius: 50px 50px 0 0;
