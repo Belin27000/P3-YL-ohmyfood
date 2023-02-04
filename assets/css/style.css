@@ -58,6 +58,7 @@ br {
   }
 }
 @keyframes fade {
+  /*disable display loader spinner*/
   0% {
     opacity: 1;
   }
