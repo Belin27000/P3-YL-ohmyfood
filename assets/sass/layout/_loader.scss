@@ -31,7 +31,7 @@ body {
         }
 
         &--hidden {
-            animation: fade 3s ease-in-out;
+            animation: fade 3s linear;
             animation-delay: 3s;
             animation-fill-mode: forwards;
             /*animation-delay: 3s;*/
