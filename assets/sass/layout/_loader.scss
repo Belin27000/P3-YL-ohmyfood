@@ -24,7 +24,7 @@ body {
             @for $i from 1 through $letter {
                 &__#{$i} {
                     /*@include slideup;*/
-                    animation: loading 3s ease-in-out infinite;
+                    animation: loading 3s ease infinite;
                     animation-delay: $i*.1s;
                 }
             }
