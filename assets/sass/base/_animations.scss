@@ -2,15 +2,26 @@
 
     /*animation teste spinner loading*/
     0% {
-        transform: translateY(-1em);
+        transform: translateY(0em);
     }
 
     50% {
-        transform: translatey(0em);
+        transform: translatey(-1em);
     }
 
     100% {
-        transform: translatey(-1em);
+        transform: translatey(0em);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
     }
 }
 
