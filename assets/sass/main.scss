@@ -6,11 +6,11 @@
 @import "./utils/_mixins";
 @import "./utils/_placeholder";
 
-@import "./components/loader";
+
 @import "./components/_btn";
 @import "./components/_btnLike";
 
-
+@import "./layout/loader";
 @import "./layout/_header";
 @import "./layout/_body";
 @import "./layout/_footer";
