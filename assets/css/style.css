@@ -51,7 +51,7 @@ br {
     transform: translateY(0em);
   }
   50% {
-    transform: translatey(-1em);
+    transform: translatey(-2em);
   }
   100% {
     transform: translatey(0em);
@@ -181,42 +181,42 @@ body .loader .letter {
 }
 body .loader .letter__1 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.1s;
 }
 body .loader .letter__2 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.2s;
 }
 body .loader .letter__3 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.3s;
 }
 body .loader .letter__4 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.4s;
 }
 body .loader .letter__5 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.5s;
 }
 body .loader .letter__6 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.6s;
 }
 body .loader .letter__7 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.7s;
 }
 body .loader .letter__8 {
   /*@include slideup;*/
-  animation: loading 3s ease-in-out infinite;
+  animation: loading 3s ease infinite;
   animation-delay: 0.8s;
 }
 body .loader--hidden {
