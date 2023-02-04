@@ -6,9 +6,9 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
+        font-family: 'shrikhand';
         font-size: 5vw;
         font-weight: bold;
-        font-family: 'shrikhand';
         background: white;
         display: flex;
         justify-content: center;
@@ -31,7 +31,7 @@ body {
         }
 
         &--hidden {
-            animation-duration: 2s;
+            animation-duration: 4s;
             animation-delay: 3s;
             animation-name: fade;
             animation-iteration-count: linear;
