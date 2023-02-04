@@ -59,9 +59,11 @@ br {
 }
 @keyframes fade {
   /*disable display loader spinner*/
-  100% {
+  from {
+    opacity: 1;
+  }
+  to {
     opacity: 0;
-    z-index: -1;
   }
 }
 @keyframes slideup {
@@ -74,8 +76,7 @@ br {
     transform: translateY(0);
     opacity: 1;
   }
-}
-/*Animation affiochage page menu*/
+} /*Animation affiochage page menu*/
 body main .menu__pic, body main .restaurants, body main .presentation, body main .explore, header, .btn {
   display: grid;
   align-items: center;
@@ -220,7 +221,7 @@ body .loader .letter__8 {
 body .loader--hidden {
   animation: fade 3s linear;
   animation-delay: 3s;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
   /*animation-delay: 3s;*/
   /*z-index: 0;*/
 }
