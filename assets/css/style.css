@@ -64,6 +64,7 @@ br {
   }
   to {
     opacity: 0;
+    z-index: 0;
   }
 }
 @keyframes slideup {
@@ -76,7 +77,8 @@ br {
     transform: translateY(0);
     opacity: 1;
   }
-} /*Animation affiochage page menu*/
+}
+/*Animation affiochage page menu*/
 body main .menu__pic, body main .restaurants, body main .presentation, body main .explore, header, .btn {
   display: grid;
   align-items: center;
@@ -219,8 +221,10 @@ body .loader .letter__8 {
   animation-delay: 0.8s;
 }
 body .loader--hidden {
-  animation: fade 3s linear;
+  animation-duration: 2s;
   animation-delay: 3s;
+  animation-name: fade;
+  animation-iteration-count: linear;
   animation-fill-mode: forwards;
   /*animation-delay: 3s;*/
   /*z-index: 0;*/

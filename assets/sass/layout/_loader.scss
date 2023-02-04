@@ -31,8 +31,10 @@ body {
         }
 
         &--hidden {
-            animation: fade 3s linear;
+            animation-duration: 2s;
             animation-delay: 3s;
+            animation-name: fade;
+            animation-iteration-count: linear;
             animation-fill-mode: forwards;
             /*animation-delay: 3s;*/
             /*z-index: 0;*/
